@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+  background-color: #f8f8f8;
+}
+.category_menu{
+  @apply bg-cover bg-no-repeat w-[100%] h-[90px] relative flex items-center justify-center font-bold
+}
+.category_menu_span{
+  @apply text-white relative  text-center
+}
+.shadowEl{
+  @apply shadow shadow-sm
+}
+.btn{
+  @apply font-bold bg-[#6CBC02]   text-white rounded 
+}
