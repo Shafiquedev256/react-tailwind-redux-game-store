@@ -22,6 +22,10 @@ export const fetchAllGames = createAsyncThunk(
 const initialState = {
   entities: [],
   loading: 'idle', 
+   race : [],
+   action:[],
+   sports:[],
+   adventure:[]
 };
 
 const gamesSlice = createSlice({
@@ -32,6 +36,14 @@ const gamesSlice = createSlice({
     builder.addCase(fetchAllGames.fulfilled, (state, action) => {
       state.entities = action.payload;
       state.loading = 'fulfilled';
+      const race = action.payload.filter(item=>item.category=="Race")
+      const actionEl = action.payload.filter(item=>item.category=="Action")
+      const sports = action.payload.filter(item=>item.category=="sports")
+      const adventure = action.payload.filter(item=>item.category=="Adventure")
+      state.race = race;
+      state.action =actionEl;
+      state.sports = sports;
+      state.adventure = adventure
     });
     builder.addCase(fetchAllGames.pending, (state) => {
       state.loading = 'pending';
