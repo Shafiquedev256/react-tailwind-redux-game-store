@@ -8,6 +8,7 @@ export const Home = ()=>{
     <>
     <section>
     <Header2/>
+    <div></div>
    <Discount/>
    <Category_menu/>
    <Categorized endpoint="Action" bg="bg-[#EAEBFF]" category="Popular" img_w="w-[130px]"/>
