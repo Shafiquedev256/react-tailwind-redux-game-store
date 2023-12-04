@@ -4,7 +4,7 @@ import {useState,useEffect} from "react"
 
 export const Cart = ()=>{
   const [count,setCount] = useState(0)
-   const [cartEl,setCartEl] = useState(JSON.parse(localStorage.getItem('cart')))
+   const [cartEl,setCartEl] = useState(JSON.parse(localStorage.getItem('cart')) || [])
    const [total,setTotal]= useState(0)
    const [quantity,setQuantity]= useState(0)
    
