@@ -5,7 +5,7 @@ import {useNavigate} from 'react-router-dom'
 import {addGames} from '../redux/slice'
 import {Waiting} from './waitingApi'
   
-const API_url = "http://localhost:2560/api/playstation/"
+const API_url = "https://gamesapi-8lyv.onrender.com"
 
 const options = {
   method:'GET',
@@ -21,7 +21,7 @@ const dispatch = useDispatch()
   const [categories,setCategories] = useState([])
 const navigate = useNavigate()
   useEffect(()=>{
-fetch(`${API_url}/${endpoint}`,options)
+fetch(API_url)
 .then(data=> data.json()
 )
 .then(res=>{

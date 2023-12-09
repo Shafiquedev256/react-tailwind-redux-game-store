@@ -4,7 +4,7 @@ export const Header = ()=>{
     <>
     <nav class="">
    <div class="p-[0.8rem] flex items-center justify-center text-white font-bold bg-[#6CBC02]  w-screen">
-     <div><span>Fque </span> Games</div>
+     <div><span>Shafiq </span> Games</div>
    </div>
  </nav>
  <section class="pl-[.8rem] bg-white py-[20px] sticky top-0 z-10 flex flex-col md:flex-row ">

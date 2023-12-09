@@ -1,9 +1,11 @@
 import {Header} from "./header"
 import {Waiting} from './waitingApi'
 import {useDispatch,useSelector} from 'react-redux'
+import {useNavigate} from 'react-router-dom'
 import {useState,useEffect}from "react"
 export const Display_category = ({category})=>{
   const [games,setGames] =useState([])
+  const navigate=useNavigate()
 const Action = useSelector((state)=>{ return state.thunk.action})
 const Race = useSelector((state)=>{ return state.thunk.race})
 const Sports = useSelector((state)=>{ return state.thunk.sports})

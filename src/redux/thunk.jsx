@@ -1,19 +1,12 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-const API_url = "http://localhost:2560/api/playstation/"
-const options = {
-  method:'GET',
-  headers:{
-      "Content-type": "application/json",
-     'que-Key': '0784307854game0760807822',
-           
-  }
-}
+const API_url = "https://gamesapi-8lyv.onrender.com"
+
 
 export const fetchAllGames = createAsyncThunk(
   'games/fetchAllGames',
   async () => {
-    const response = await fetch(API_url,options);
+    const response = await fetch(API_url);
     const data = await response.json();
     return data;
   }
